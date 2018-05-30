@@ -5,9 +5,7 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var main2: UIImageView!
     
-    let image1 = UIImage(named: "cat1.jpg")
-    let image2 = UIImage(named: "cat2.jpg")
-    let image3 = UIImage(named: "cat3.jpg")
+    let image = ["cat1.jpg","cat2.jpg","cat3.jpg"]
     
     var x = 0
     
@@ -15,9 +13,9 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
 
         switch x {
-        case 0 :main2.image = image1
-        case 1 :main2.image = image2
-        case 2 :main2.image = image3
+        case 0 :main2.image = UIImage(named: image[0])
+        case 1 :main2.image = UIImage(named: image[1])
+        case 2 :main2.image = UIImage(named: image[2])
         default:break
         }
     }
